@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="src/insta-svgrepo-com.svg" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="left">
+        <div class="insta_logo">
+          <img id="insta_logo" src="https://www.svgrepo.com/show/303154/instagram-2016-logo.svg" alt="Instagram logo" />
+        </div>
+
+        <div class="content">
+          <div class="description">
+            <span class="text">
+              See moments from the people you follow and discover new stories.
+              <span class="gradient-text">Stay connected</span> every day.
+            </span>
+          </div>
+
+          <div class="phone-image">
+            <img id="insta-phone" src="https://static.cdninstagram.com/rsrc.php/v4/yD/r/nWfBjz-5_uf.png" alt="Instagram phone" />
+          </div>
+        </div>
+      </section>
+
+      <section class="right">
+        <form class="form">
+          <h1 class="h1_">Log in to Instagram</h1>
+
+          <label class="sr-only" for="user-input">Phone number, username, or email</label>
+          <input
+            id="user-input"
+            class="field"
+            type="text"
+            placeholder="Phone number, username, or email"
+          />
+
+          <label class="sr-only" for="password-input">Password</label>
+          <input
+            id="password-input"
+            class="field"
+            type="password"
+            placeholder="Password"
+          />
+
+          <button class="btn btn-login" type="submit">Log In</button>
+
+          <a href="#" class="forgot">Forgot password?</a>
+
+          <div class="or"><span>OR</span></div>
+
+          <button class="btn btn-facebook" type="button">
+            <img class="fbook_logo" src="src/facebook-svgrepo-com.svg" alt="Facebook logo" />
+            Log in with Facebook
+          </button>
+
+          <button class="btn btn-create-acc" type="button">Create new account</button>
+
+          <p class="signup">Don't have an account? <a href="#">Sign up</a></p>
+
+          <div class="meta-log">
+            <img src="src/meta-logo.png" alt="Meta logo" class="meta-logo-png" />
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <section class="section">
+        <ul class="upper-sec">
+          <li><a href="#">Meta</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">API</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Instagram Lite</a></li>
+          <li><a href="#">Meta AI</a></li>
+          <li><a href="#">Threads</a></li>
+          <li><a href="#">Contact Uploading and Non-Users</a></li>
+          <li><a href="#">Meta Verified</a></li>
+        </ul>
+      </section>
+
+      <section class="conf">
+        <div class="language">
+          <select name="language" id="language">
+            <option value="en">English</option>
+            <option value="es">Espanol</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Francais</option>
+          </select>
+        </div>
+
+        <div class="copyright">
+          <span>© 2026 Instagram from Meta</span>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

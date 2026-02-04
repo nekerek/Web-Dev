@@ -1,0 +1,307 @@
+body {
+  font-family: "Segoe UI Variable", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #fff;
+  margin: 0;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.hero-section h1 {
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.hero-section p {
+  color: #69727c;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 70ch;
+  text-align: center;
+}
+
+.btn {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  background: #000;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: linear-gradient(to bottom, #aaa, #000);
+  box-shadow: 0 0 2px #000;
+}
+
+.tier-cards {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.A {
+  border: 1px solid #d4dbe1;
+  border-radius: 10px;
+  width: 325px;
+  background: #fff;
+  box-shadow: 0 0 20px #999;
+}
+
+.plan-title {
+  font-size: 30px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.plan-subtitle {
+  color: #59636e;
+  width: 80%;
+  font-size: 15px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.price {
+  margin: 18px 0;
+  text-align: center;
+}
+
+.currency {
+  color: #69727c;
+  vertical-align: top;
+  font-size: 20px;
+}
+
+.amount {
+  font-size: 50px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.money {
+  font-weight: 600;
+  vertical-align: bottom;
+  font-size: 30px;
+}
+
+.period {
+  font-size: 15px;
+  color: #69727c;
+}
+
+.btn1 {
+  border: 2px solid #d4dbe1;
+  border-radius: 5px;
+  background: #fff;
+  color: #343f44;
+  font-weight: 600;
+  font-size: 14px;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btn1:hover {
+  border-color: #000;
+  background: #fff;
+}
+
+.AB {
+  background: #f6f8fa;
+  margin: 16px -25px -25px;
+  padding: 16px 25px 18px;
+  color: #59636e;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.features,
+.addons {
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.features li,
+.addons li {
+  line-height: 1.5;
+  padding: 10px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.features li:first-child,
+.addons li:first-child {
+  border-top: none;
+}
+
+.features li::before,
+.addons li::before {
+  content: ">";
+  display: inline-block;
+  width: 18px;
+  color: #6b7280;
+}
+
+.addons-title {
+  color: #0994e9;
+}
+
+.btn2 {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  background: #000;
+  border-radius: 5px;
+}
+
+.btn2:hover {
+  background: linear-gradient(to bottom, #aaa, #000);
+  box-shadow: 0 0 2px #000;
+}
+
+.features .special::before {
+  content: ">";
+  display: inline-block;
+  width: 18px;
+  color: #6b7280;
+}
+
+.btn3 {
+  width: 40%;
+  margin: 2.5%;
+  font-size: 15px;
+}
+
+.btn4 {
+  color: #343f44;
+  background: #fff;
+  border: 2px solid #d4dbe1;
+  border-radius: 5px;
+}
+
+.btn4:hover {
+  background: #fff;
+}
+
+.rec {
+  background: #0e73e9;
+  border-radius: 12px;
+  width: 330px;
+  padding: 6px;
+}
+
+.rec-h3 {
+  margin: 6px 0 8px;
+  color: #fff;
+  font-size: 11px;
+  text-align: center;
+  letter-spacing: 0.4px;
+}
+
+.additional h1 {
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.addon_field {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 0 16px 32px;
+}
+
+.addon-card {
+  background: #fff;
+  border: 1px solid #d0d7de;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.addon-card h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.addon-card p {
+  font-size: 14px;
+  color: #57606a;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.addon-card a {
+  margin-top: auto;
+  text-decoration: none;
+  font-weight: 600;
+  color: #343f44;
+}
+
+@media (max-width: 900px) {
+  .page {
+    gap: 48px;
+  }
+
+  .hero-section h1 {
+    font-size: 40px;
+    line-height: 1.15;
+  }
+
+  .hero-section p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .tier-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 0 16px;
+  }
+
+  .A,
+  .rec {
+    width: min(360px, 100%);
+  }
+
+  .btn3 {
+    width: 90%;
+    margin: 8px auto;
+    display: block;
+  }
+
+  .additional h1 {
+    font-size: 40px;
+    line-height: 1.15;
+    margin-bottom: 24px;
+  }
+
+  .addon_field {
+    grid-template-columns: 1fr;
+  }
+}

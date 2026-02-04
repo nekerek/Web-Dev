@@ -1,0 +1,317 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica", Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+}
+
+.page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-right: 2px #e4e8ee solid;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.insta_logo {
+  align-self: flex-start;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 40px;
+}
+
+#insta_logo {
+  width: 75px;
+}
+
+#insta-phone {
+  width: 550px;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 550px;
+}
+
+.text {
+  font-size: 42px;
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #ff5c00, #ff0069, #d300c5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 50px;
+  border: none;
+}
+
+.h1_ {
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  margin-left: 17px;
+  display: flex;
+  align-self: self-start;
+}
+
+.field {
+  margin-left: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #e8ebee;
+  width: 450px;
+  font-size: 15px;
+  padding: 16px;
+}
+
+.field::placeholder {
+  color: #667583;
+}
+
+.field:focus {
+  outline: 0.5px solid #2f7be4;
+  color: #2f7be4;
+  font-weight: 600;
+}
+
+.field:hover {
+  outline: 0.5px solid #2f7be4;
+  color: #2f7be4;
+}
+
+.btn {
+  width: 485px;
+  margin-left: 15px;
+  margin-bottom: 20px;
+  padding: 8px 5px 10px;
+  font-size: 15px;
+  border-radius: 20px;
+  background-color: #fff;
+  border: 1px solid #f0f2f4;
+  font-weight: 600;
+}
+
+.btn-login {
+  border: none;
+  background-color: #a4c2f3;
+  color: #fff;
+}
+
+.btn-login:hover {
+  background-color: #2f7be4;
+}
+
+.forgot {
+  color: #000;
+  text-decoration: none;
+}
+
+.forgot:hover {
+  color: #2f7be4;
+}
+
+.or {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin: 12px 0 20px;
+  color: #959595;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.or::before,
+.or::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #e4e8ee;
+}
+
+.or::before {
+  left: 0;
+}
+
+.or::after {
+  right: 0;
+}
+
+.or span {
+  background: #fff;
+  padding: 0 12px;
+}
+
+.btn-facebook {
+  font-weight: 600;
+  margin-top: 10px;
+  color: #36373b;
+  margin-bottom: 5px;
+}
+
+.btn-facebook:hover {
+  border-color: #2f7be4;
+}
+
+.fbook_logo {
+  width: 15px;
+}
+
+.btn-create-acc {
+  color: #2f7be4;
+  border-color: #2f7be4;
+}
+
+.btn-create-acc:hover {
+  background-color: #2f7be4;
+  color: #fff;
+}
+
+.signup {
+  margin: 6px 0 20px;
+  font-size: 14px;
+}
+
+.signup a {
+  color: #2f7be4;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}
+
+.meta-logo-png {
+  width: 70px;
+}
+
+.footer {
+  border: none;
+  border-top: 2px solid #e4e8ee;
+  padding-top: 30px;
+}
+
+.section {
+  background-color: #fff;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.upper-sec,
+.conf {
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: center;
+  align-items: center;
+  column-gap: 16px;
+  row-gap: 5px;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.upper-sec li a {
+  text-decoration: none;
+  color: #959595;
+  cursor: pointer;
+}
+
+#language,
+.copyright {
+  border: none;
+  color: #959595;
+}
+
+#language:focus {
+  border: none;
+  color: #959595;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 1025px) {
+  .left {
+    display: none;
+    border: none;
+  }
+
+  .page {
+    min-height: 100vh;
+    padding: 24px 16px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .form {
+    width: 100%;
+    margin-left: 0;
+    padding: 24px 18px;
+    border: 1px solid #e8ebee;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    background: #fff;
+  }
+
+  .field,
+  .btn {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .h1_ {
+    margin-left: 0;
+  }
+}
