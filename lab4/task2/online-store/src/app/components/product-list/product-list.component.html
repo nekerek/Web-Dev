@@ -1,0 +1,10 @@
+<section class="catalog" aria-labelledby="catalog-heading">
+  <h1 id="catalog-heading">Online Store Catalog</h1>
+
+  <div class="product-grid">
+    <app-product-card
+      *ngFor="let product of products; trackBy: trackByProductId"
+      [product]="product"
+    ></app-product-card>
+  </div>
+</section>

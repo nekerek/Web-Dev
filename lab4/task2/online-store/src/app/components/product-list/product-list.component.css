@@ -1,0 +1,28 @@
+:host {
+  display: block;
+}
+
+.catalog {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 24px 16px 40px;
+}
+
+#catalog-heading {
+  color: #101828;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 24px;
+}
+
+.product-grid {
+  align-items: stretch;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.product-grid app-product-card {
+  display: block;
+  height: 100%;
+}
