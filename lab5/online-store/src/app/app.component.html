@@ -1,0 +1,24 @@
+<main class="page">
+  <section class="catalog-shell" aria-labelledby="catalog-title">
+    <h1 id="catalog-title">Online Store Catalog</h1>
+
+    <div class="category-list" role="tablist" aria-label="Product categories">
+      @for (category of categories(); track trackByCategoryId($index, category)) {
+        <button
+          type="button"
+          class="category-button"
+          [class.category-button-active]="isCategorySelected(category.id)"
+          (click)="selectCategory(category.id)"
+        >
+          {{ category.name }}
+        </button>
+      }
+    </div>
+
+    @if (selectedCategoryId() !== null) {
+      <app-product-list [products]="selectedProducts()"></app-product-list>
+    } @else {
+      <p class="welcome-message">Select a category to view products.</p>
+    }
+  </section>
+</main>

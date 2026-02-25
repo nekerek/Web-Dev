@@ -1,0 +1,47 @@
+:host {
+  display: block;
+}
+
+.page {
+  padding: 24px 16px 40px;
+}
+
+.catalog-shell {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+#catalog-title {
+  color: #101828;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 20px;
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.category-button {
+  background: #f2f4f7;
+  border: 1px solid #d0d5dd;
+  border-radius: 999px;
+  color: #1d2939;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 8px 14px;
+}
+
+.category-button-active {
+  background: #1570ef;
+  border-color: #1570ef;
+  color: #ffffff;
+}
+
+.welcome-message {
+  color: #475467;
+  font-weight: 600;
+}
