@@ -1,0 +1,16 @@
+<div>
+  <button type="button" (click)="onSortChange('asc')">Ascending</button>
+  <button type="button" (click)="onSortChange('desc')">Descending</button>
+</div>
+
+<div class="product-grid">
+  @for (product of visibleProducts(); track trackByProductId($index, product)) {
+    <app-product-item
+      [product]="product"
+      (like)="likeProduct($event)"
+      (delete)="deleteProduct($event)"
+    ></app-product-item>
+  } @empty {
+    <p class="empty-state">No products in this category.</p>
+  }
+</div>

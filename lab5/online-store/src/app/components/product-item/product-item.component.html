@@ -1,0 +1,123 @@
+<article class="product-card">
+  <div class="product-gallery">
+    <div class="product-image-wrapper">
+      <img [src]="selectedImage()" [alt]="product().name" class="product-image" loading="lazy" />
+      <button
+        type="button"
+        class="gallery-nav-button gallery-nav-button-prev"
+        (click)="showPreviousImage()"
+        [attr.aria-label]="'Show previous image for ' + product().name"
+      >
+        &#8249;
+      </button>
+      <button
+        type="button"
+        class="gallery-nav-button gallery-nav-button-next"
+        (click)="showNextImage()"
+        [attr.aria-label]="'Show next image for ' + product().name"
+      >
+        &#8250;
+      </button>
+    </div>
+
+    <div class="gallery-thumbnails" [attr.aria-label]="'Image thumbnails for ' + product().name">
+      <button
+        type="button"
+        class="gallery-thumbnail-button"
+        *ngFor="let galleryImage of galleryImages(); let imageIndex = index; trackBy: trackByImageUrl"
+        [class.gallery-thumbnail-button-active]="isSelectedImage(imageIndex)"
+        (click)="selectImage(imageIndex)"
+        [attr.aria-label]="'Show image ' + (imageIndex + 1) + ' for ' + product().name"
+      >
+        <img [src]="galleryImage" [alt]="product().name + ' thumbnail ' + (imageIndex + 1)" class="gallery-thumbnail-image" />
+      </button>
+    </div>
+  </div>
+
+  <div class="product-content">
+    <h2 class="product-title">{{ product().name }}</h2>
+    <p class="product-description">{{ product().description }}</p>
+    <p class="product-price">{{ product().price }} KZT</p>
+
+    <div class="product-rating" [attr.aria-label]="'Rating: ' + product().rating + ' out of 5'">
+      <span class="rating-value">{{ product().rating }}/5</span>
+      <span class="rating-stars" aria-hidden="true">
+        <span *ngFor="let starIndex of starIndexes" class="rating-star-wrapper">
+          <svg
+            viewBox="0 0 24 24"
+            class="rating-star"
+            [class.rating-star-filled]="isFilledStar(starIndex, product().rating)"
+          >
+            <path d="m12 17.27 6.18 3.73-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+          </svg>
+        </span>
+      </span>
+    </div>
+
+    <div class="product-actions" role="group" [attr.aria-label]="'Actions for ' + product().name">
+      <a
+        [href]="product().link"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="product-link"
+        [attr.aria-label]="'Open ' + product().name + ' on kaspi.kz (opens in a new tab)'"
+      >
+        View on kaspi.kz
+      </a>
+
+      <div class="share-actions">
+        <a
+          [href]="buildWhatsAppShareUrl()"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="share-button"
+          [attr.aria-label]="'Share ' + product().name + ' on WhatsApp (opens in a new tab)'"
+        >
+          <svg class="share-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17.47 14.38c-.27-.13-1.6-.79-1.85-.88-.25-.09-.43-.13-.61.14-.18.27-.7.88-.86 1.06-.16.18-.31.2-.58.07-.27-.13-1.13-.42-2.15-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.55.12-.12.27-.31.4-.47.13-.16.18-.27.27-.45.09-.18.04-.34-.02-.47-.07-.13-.61-1.47-.84-2.02-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.64 1.11 2.82c.13.18 1.9 2.9 4.6 4.06.64.28 1.14.44 1.53.56.64.2 1.22.17 1.68.1.51-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.06-.11-.25-.18-.52-.31Z"></path>
+            <path d="M20.52 3.45A11.8 11.8 0 0 0 3.8 20.1L2.5 24l3.99-1.28A11.8 11.8 0 1 0 20.52 3.45Zm-8.72 18.14h-.01a9.85 9.85 0 0 1-5.01-1.37l-.36-.21-2.37.76.77-2.31-.24-.38a9.87 9.87 0 1 1 7.22 3.51Z"></path>
+          </svg>
+        </a>
+
+        <a
+          [href]="buildTelegramShareUrl()"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="share-button share-button-telegram"
+          [attr.aria-label]="'Share ' + product().name + ' on Telegram (opens in a new tab)'"
+        >
+          <svg class="share-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21.5 3.5 2.8 10.72c-1.28.51-1.27 1.22-.23 1.54l4.8 1.5 1.85 5.74c.24.66.12.92.82.92.54 0 .78-.25 1.08-.55l2.33-2.27 4.85 3.58c.89.49 1.53.24 1.75-.82L23 5.12c.32-1.3-.5-1.9-1.5-1.62ZM8.14 13.42l10.95-6.91c.55-.34 1.05-.15.64.21l-9.37 8.47-.36 3.85-1.86-5.62Z"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="engagement-actions">
+      <button
+        type="button"
+        class="engagement-button like-button"
+        [class.like-button-active]="product().likes > 0"
+        (click)="onLike()"
+        [attr.aria-label]="'Like ' + product().name"
+      >
+        <svg class="engagement-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6 6 0 0 1 16.5 3C19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+        </svg>
+        <span>{{ product().likes }}</span>
+      </button>
+
+      <button
+        type="button"
+        class="engagement-button delete-button"
+        (click)="onDelete()"
+        [attr.aria-label]="'Delete ' + product().name"
+      >
+        <svg class="engagement-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M9 3h6l1 2h4v2H4V5h4l1-2Zm1 7h2v8h-2v-8Zm4 0h2v8h-2v-8ZM7 10h2v8H7v-8Zm-1 11h12a2 2 0 0 0 2-2V8H4v11a2 2 0 0 0 2 2Z"></path>
+        </svg>
+        <span>Delete</span>
+      </button>
+    </div>
+  </div>
+</article>
