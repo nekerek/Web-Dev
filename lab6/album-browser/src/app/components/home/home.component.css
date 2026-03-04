@@ -1,0 +1,36 @@
+.home {
+  max-width: 700px;
+  margin: 1.5rem auto;
+  padding: 1.35rem;
+  border: 1px solid #d7dfea;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.08);
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  color: #1e3a8a;
+}
+
+p {
+  margin: 0;
+  color: #5b6678;
+}
+
+.browse-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.52rem 0.92rem;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid #1d4ed8;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.browse-btn:hover {
+  background: #1d4ed8;
+}

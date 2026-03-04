@@ -1,0 +1,59 @@
+.detail {
+  max-width: 700px;
+  margin: 1.5rem auto;
+  padding: 0.75rem;
+}
+
+h2 {
+  margin: 0 0 0.75rem;
+  color: #1e3a8a;
+}
+
+.detail-card {
+  border: 1px solid #d7dfea;
+  border-radius: 10px;
+  padding: 1rem;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
+}
+
+input {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #c4d0e1;
+  border-radius: 6px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+button,
+a {
+  border: 1px solid #1d4ed8;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.45rem 0.75rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:hover,
+a:hover {
+  background: #1d4ed8;
+}
+
+button:disabled {
+  opacity: 0.7;
+}
