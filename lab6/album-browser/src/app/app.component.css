@@ -1,0 +1,50 @@
+:host {
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --line: #d7dfea;
+  --text: #1f2937;
+  --muted: #5b6678;
+  --brand: #2563eb;
+  --brand-dark: #1d4ed8;
+  --accent: #0f766e;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  min-height: 100vh;
+  display: block;
+  color: var(--text);
+  background: radial-gradient(circle at 15% 10%, #eef4ff 0, transparent 35%), var(--bg);
+}
+
+.main-nav {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--card);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--muted);
+  padding: 0.42rem 0.8rem;
+  border-radius: 999px;
+  transition: all 0.15s ease;
+}
+
+.main-nav a:hover {
+  background: #edf2ff;
+  color: var(--brand-dark);
+}
+
+.main-nav a.active {
+  font-weight: 700;
+  background: var(--brand);
+  color: #fff;
+  text-decoration: none;
+}
+
+.page-content {
+  padding: 1.1rem;
+}

@@ -1,0 +1,17 @@
+<section class="albums">
+  <h2>Albums</h2>
+
+  <p *ngIf="isLoading" class="state">Loading albums...</p>
+  <p *ngIf="!isLoading && errorMessage" class="error">{{ errorMessage }}</p>
+  <p *ngIf="!isLoading && !errorMessage && albums.length === 0" class="state">No albums found.</p>
+
+  <ul *ngIf="!isLoading && albums.length > 0" class="album-list">
+    <li *ngFor="let album of albums" class="album-item">
+      <a [routerLink]="['/albums', album.id]" class="album-link">
+        <span class="album-id">#{{ album.id }}</span>
+        <span>{{ album.title }}</span>
+      </a>
+      <button type="button" (click)="deleteAlbum(album.id)">Delete</button>
+    </li>
+  </ul>
+</section>
